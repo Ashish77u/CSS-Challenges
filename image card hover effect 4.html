@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image card hover effect - cssChallenges practice 04</title>
+</head>
+
+<!-- =========== css apply ============ -->
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: sans-serif;
+        background: aquamarine;
+        flex-wrap: wrap;
+    }
+    .card{
+        position: relative;
+        width: 300px;
+        height: 180px;
+        box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+        border-radius: 10px;
+        padding: 30px 50px;
+        transition: 0.5s;
+        background-color:white;
+cursor: pointer;
+    }
+    .card:hover{
+        height: 320px;
+margin-bottom: 10px;
+    }
+.box-img{
+position: relative;
+width: 100%;
+height: 100%;
+transform: translateY(-80px);
+/* top: -50px; */
+z-index: 2;
+}
+.box-img img{
+width: 100%;
+border-radius: 5px;
+}
+.contanier{
+    text-align: center;
+    transform: translateY(-400px);
+    opacity: 0;
+}
+.card:hover > .contanier{
+    opacity: 1;
+    transform: translateY(-200px);
+}
+</style>
+
+
+<body>
+    
+    <div class="card">
+        <div class="box-img">
+<img src="./Images/image card hover effect a.jpg" alt="">
+        </div>
+        <div class="contanier">
+            <h2>Furits</h2>
+<p>
+r adipisicing elit. Rem cumque dicta minima laboriosam accusamus reiciendis impedit quasi dignissimos voluptate voluptates adipisci distinctio cupiditate, quos libero laborum fuga? r sit amet consectetur adipisicing elit. Quisquam, eveniet? .
+</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="box-img">
+<img src="./Images/image card hover effect b.jpg" alt="">
+        </div>
+        <div class="contanier">
+            <h2>GRAPES</h2>
+<p>
+    Grapes are a fruit, botanically a berry, of the deciduous woody vines of the flowering plant genus Vitis. They can be eaten fresh or they can be used for making wine, jam, juicy, jelly, grape seed extract, raisins, vinegar and grape seed oil.
+</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="box-img">
+<img src="./Images/image card hover effect c.jpg" alt="">
+        </div>
+        <div class="contanier">
+            <h2>STRAWBERRIS</h2>
+<p>
+    Strawberries are the first fruit to ripen each spring. Because they just know we can't wait too long for their pure fruity goodness. 2. There are 200 seeds on an average strawberry. Plus, they're the only fruit to wear their seeds on the outside.
+</p>
+        </div>
+    </div>
+
+</body>
+</html>
