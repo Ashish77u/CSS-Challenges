@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click sound circle button - cssChallenges practice 08</title>
+</head>
+<style>
+  
+  * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        text-decoration: none;
+    }
+
+    body {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        background-color: aquamarine;
+    }
+.big_circle{
+    position: relative;
+width: 100px;
+height: 100px;
+background-color: rgb(68, 64, 64);
+border-radius: 50px;
+}
+.big_circle::before{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: blue;
+    top: 21%;
+    left: 21%;
+}
+.big_circle:hover::before{
+    width: 75px;
+    height: 75px;
+    top: 13%;
+    left: 13%;
+ transition: all 0.5s;
+}
+.big_circle:hover:active::before{
+    width: 55px;
+    height: 55px;
+    top: 22%;
+    left: 22%;
+ transition: all 0.3s;
+}
+
+</style>
+
+<body>
+   <div class="big_circle" onclick="audio.play()">
+    <!-- <div class="small_circle">
+
+    </div> -->
+   </div>
+</body>
+
+<script>
+const audio = new Audio();
+audio.src = "./Images/click.mp3"
+</script>
+
+</html>
