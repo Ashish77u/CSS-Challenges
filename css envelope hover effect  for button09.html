@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Envelope hover effect for button - cssChallenges practice 09
+    </title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       text-decoration: none;
+    }
+    body{
+        display: grid;
+        place-items: center;
+        background: #fff;
+        height: 100vh;
+    }
+    a{
+      position: relative;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        background-color: red;
+        color: #fff;
+        list-style: none;
+        font-size: 3rem;
+    }
+    a::before{
+        content: "ashish sahani";
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        padding: 10px 20px;
+        background-color: rgb(21, 0, 255);
+        color: #fff;
+        list-style: none;
+        font-size: 3rem;
+        text-transform: uppercase;
+        transform-origin: top;
+        transform: rotateX(270deg);
+        transition: 0.3s;
+    }
+    a:hover::before{
+        transform: rotateX(0deg);
+    }
+    a::after{
+        content: "ashish sahani";
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        padding: 10px 20px;
+        background-color: rgb(0, 255, 34);
+        color: #fff;
+        list-style: none;
+        font-size: 3rem;
+        text-transform: uppercase;
+        transform-origin: top;
+        transform: rotateX(270deg);
+        transition: 0.3s;
+        transition-delay: 0.3s;
+    }
+    a:hover::after{
+      transform: rotateX(0deg);
+    }
+    
+</style>
+<body>
+<a href="#" class="btn">ashish sahani</a>
+</body>
+</html>
